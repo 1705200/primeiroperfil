@@ -41,7 +41,7 @@ body{
     justify-content: center;
     align-items: center; /*alinhamento de itens*/
 }
-.icon, .email{
+.icon, #email{
     display: inline-block; /*blocos na linha*/
     height: 35px;
     width: 35px;
@@ -52,7 +52,7 @@ body{
     margin: 3px;
     overflow: hidden; /* Ocultar o que não se encaixa na borda*/
 }
-.icon i, .email i{
+.icon i, #email i{
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -101,18 +101,19 @@ body{
 .icon:nth-child(4):hover i{
     background:#57d8ff;
 }
-.email:hover i{
+#email:hover i{
     background: #ff9393;
 }
 
 /*Fim CSS Redes Sociais*/
 
 .texto{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items:center ;
     margin: auto;
-    margin-top: -30px;
+    margin-top: 30px;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -130,17 +131,16 @@ body{
 
 /* Magin top- em cima, bottom- embaixo, left/right- esquerda/direita*/
 
-.titulo{ 
-    display:flex;
-    color:#ffe2c0;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 22px;
-    justify-content: center;
-    text-align:justify;
-    align-items:center;
-    margin: auto;
-    margin-top: 15px;
-    cursor: pointer;
+#sobre-mim{ 
+   position: absolute;
+   top:3px;
+   display: flex;
+   color: #ffd2ae;
+   font-size: 25px;
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+   line-height: 35px;
+
 }
 .Linguagem {
     display: flex;
@@ -164,6 +164,14 @@ body{
 .Projetos a{
     text-decoration: none; /* Tirar o áspecto de link/ "mascarar o link" */
     color: #000000;
+}
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    color: #ffd2ae;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 60px;
 }
 .item{
     margin: auto;
@@ -199,5 +207,74 @@ body{
     margin-top: 50px;
     padding: 50px;
     font-family: 'Times New Roman', Times, serif;
+}
+/*Configurações para Desktop*/
+/*Dispositivos Mobiles */
+@media (max-width: 700px){
+    .imagem img{
+        width: 220px;
+        border-radius: 200px;
+        margin-top: 30px;
+    }
+    .texto{
+        width:350px;
+        height: 260px;
+    }
+    .Linguagem img{
+        width: 165px;
+    }
+    .item{
+        width: 350px;
+    }
+    #video{
+        width: 330px;
+    }
+}
+@media (max-width:500px){
+    .imagem img{
+        width: 170px;
+    }
+    .texto{
+        padding: 15px;
+        width: 350px;
+        height: 280px;
+        margin-top: 30px;
+    }
+    .subtitulo{
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #video{
+        width: 3600px;
+        height: 160px;
+    }
+    .item{
+        width: 350px;
+        height: 40px;
+    }
+    .Linguagem img{
+        margin-top: 15px;
+        width: 120px;
+    }
+    .icon, #email {
+        width: 25px;
+        height: 25px;
+        border-radius: 30px;
+        
+    }
+    .icon i, #email i{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 30px;
+
+    }
 }
 
