@@ -190,12 +190,16 @@ body{
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-#video{
+.item:hover{
+    transition: 1s;
+    background: #f7d5ba;
+}
+.video{
     padding: 10px;
     margin: auto;
     display: none;
 }
-#video.active{
+.video.active{
     display: block;
 
 }
